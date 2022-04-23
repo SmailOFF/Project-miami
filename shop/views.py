@@ -118,3 +118,6 @@ def rate_product(request, pk):
 def orders(request):
     orders_list = Order.objects.filter(customer=request.user)
     return render(request, 'orders.html', {'orders': orders_list})
+
+def function():
+    return None
