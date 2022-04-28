@@ -4,7 +4,6 @@ from django.contrib.auth.models import User
 
 class Product(models.Model):
     title = models.CharField(max_length=255)
-    slug = models.SlugField()
     description = models.TextField()
     price = models.IntegerField()
     is_new = models.BooleanField(default=False)
@@ -56,10 +55,11 @@ class CartItem(models.Model):
     def total_price(self):
         return self.product.price * self.quantity
 
-
+#dobavit v pizza
 class Order(models.Model):
-    address = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
     phone = models.CharField(max_length=255)
+    address = models.CharField(max_length=255)
     total_price = models.IntegerField()
     customer = models.ForeignKey(User, on_delete=models.CASCADE)
 

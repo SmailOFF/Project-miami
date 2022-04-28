@@ -112,7 +112,7 @@ def rate_product(request, pk):
             rating.save()
             return redirect('shop:rate_product', pk=pk)
     form = RateForm()
-    return render(request, 'rate.html', {'form': form, 'product': product, 'reviews': reviews})
+    return render(request, 'action.html', {'form': form, 'product': product, 'reviews': reviews})
 
 
 def orders(request):

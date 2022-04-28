@@ -2,14 +2,15 @@ from django import forms
 from .models import Order, Review, RATE_CHOICES
 from .bulma_mixin import BulmaMixin
 
-
+#dobavit v pizza
 class OrderForm(BulmaMixin, forms.Form):
-    address = forms.CharField(label='Write your address')
+    name = forms.CharField(label='Write your name')
     phone = forms.CharField(label='Write your phone')
-
+    address = forms.CharField(label='Write your address')
+    time_delivery = forms.CharField(label='Faster')
     class Meta:
         model = Order
-        fields = ['phone', 'address']
+        fields = ['name','phone', 'address','time_delivery']
 
 
 class RateForm(forms.ModelForm):
