@@ -1,5 +1,5 @@
 {% load static %}
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -9,18 +9,53 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
 </head>
 <body>
-<section class="section">
-
-            <div class="container">
-                <div>
-                    <figure class="image is-128x128">
-                        <img src="{% static 'uploads/logo.svg' %}" alt="LOGO">
-                    </figure>
-                </div>
+<section class="section pt-3">
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <a class="navbar-item">
+                        <img src="{% static 'uploads/logo.png' %}" alt="LOGO">
+                </a>
             </div>
+            <div class="navbar-end is-vcentered">
+                <button class="button navbar-end is-rounded">
+                    <h1 class="">Заказать звонок</h1>
+                </button>
+                <p class="is-size-4">8 499 391-84-49</p>
+            </div>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start is-size-6">
+                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Pizza</span></a>
+                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Pasta</span></a>
+                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Soup</span></a>
+                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Salate</span></a>
+                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Drink</span></a>
+                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Sladkoe</span></a>
+                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Bakaleya</span></a>
+                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Antipasta</span></a>
+                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Aksiya</span></a>
+                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Combo</span></a>
+                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Contact</span></a>
+            </div>
+        </div>
+
+    </div>
+    </div>
 </section>
+{% block content %}
+
+{% endblock %}
+
+<footer class="section">
+    <div class="content has-text-centered">
+        <p>
+            <strong><a href="/" class="has-text-dark"></a></strong>
 
 
+        </p>
+    </div>
+</footer>
 <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
