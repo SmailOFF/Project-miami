@@ -8,7 +8,7 @@ from django.db.models import Q
 
 
 # Create your views here.
-@login_required(login_url='/users/sign_in')
+# @login_required(login_url='/users/sign_in')
 def products_list(request):
     search = request.GET.get('search')
     product_id = request.GET.get('product')
