@@ -9,19 +9,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
 </head>
 <body>
-<section class="section pt-3">
+<section class="section pt-3 is-fullwidth">
     <div class="container">
         <div class="navbar">
             <div class="navbar-brand">
                 <a class="navbar-item">
-                        <img src="{% static 'uploads/logo.png' %}" alt="LOGO">
+                    <img src="{% static 'uploads/logo.png' %}" alt="LOGO">
                 </a>
             </div>
             <div class="navbar-end is-vcentered">
-                <button class="button navbar-end is-rounded">
-                    <h1 class="">Заказать звонок</h1>
+                <button class="button is-rounded is-light has-text-weight-bold">
+                    Заказать звонок
                 </button>
-                <p class="is-size-4">8 499 391-84-49</p>
+                <p class="is-size-4 has-text-warning">8 499 391-84-49</p>
             </div>
         </div>
         <div class="navbar-menu">
@@ -37,7 +37,13 @@
                 <a href="#" class="navbar-item"><span class="has-text-weight-bold">Aksiya</span></a>
                 <a href="#" class="navbar-item"><span class="has-text-weight-bold">Combo</span></a>
                 <a href="#" class="navbar-item"><span class="has-text-weight-bold">Contact</span></a>
+                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Sign in</span></a>
+                <button class="button navbar-end is-rounded">
+                    <h1 class=""><strong>Cart</strong></h1>
+                </button>
+
             </div>
+            >
         </div>
 
     </div>
@@ -47,14 +53,24 @@
 
 {% endblock %}
 
+</footer>
 <footer class="section">
-    <div class="content has-text-centered">
-        <p>
-            <strong><a href="/" class="has-text-dark"></a></strong>
-
-
-        </p>
+    <a href="">
+        <figure>
+            <img src="{% static 'uploads/logo.png' %}" alt="">
+        </figure>
+    </a>
+    <div class="level-item is-justify-content-left navbar-start">
+        <div class="navbar-item has-text-weight-bold">Калорийность и состав</div>
+        <div class="navbar-item has-text-weight-bold">Правовая информация</div>
     </div>
+    <h1 class="navbar-item has-text-weight-bold">Мы в соцсетях</h1>
+    <h1 class="navbar-item is-dark">YouTube</h1>
+    <h1 class="navbar-item is-dark">Instagram</h1>
+    <br>
+    <h1 class="is-dark">YaBao Все праав защищены © 2021</h1>
+
+
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
