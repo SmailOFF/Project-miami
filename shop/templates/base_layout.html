@@ -52,48 +52,49 @@
 {% block content %}
 
 {% endblock %}
-<section class="section hero is-medium">
-    <footer class="columns">
-        <div class="columns">
-            <div class="column">
-                <figure>
-                    <img src="{% static 'uploads/logo.png' %}" alt="">
-                </figure>
-                <div class="level-item is-justify-content-left navbar-start">
-                    <div class="navbar-item has-text-weight-bold">Калорийность и состав</div>
-                    <div class="navbar-item has-text-weight-bold">Правовая информация</div>
+<section class="section">
+    <div class="container">
+        <footer class="columns">
+                <div class="column is-6">
+                    <figure>
+                        <img src="{% static 'uploads/logo.png' %}" alt="">
+                    </figure>
+                    <div class="level-item is-justify-content-left navbar-start">
+                        <div class="navbar-item has-text-weight-bold pl-0">Калорийность и состав</div>
+                        <div class="navbar-item has-text-weight-bold pl-0">Правовая информация</div>
+                    </div>
+                    <h1 class="navbar-item has-text-weight-bold pl-0">Мы в соцсетях</h1>
+                    <h1 class="navbar-item is-dark pl-0">YouTube</h1>
+                    <h1 class="navbar-item is-dark pl-0">Instagram</h1>
+                    <br>
+                    <h1 class="is-dark">YaBao Все праав защищены © 2021</h1>
                 </div>
-                <h1 class="navbar-item has-text-weight-bold">Мы в соцсетях</h1>
-                <h1 class="navbar-item is-dark">YouTube</h1>
-                <h1 class="navbar-item is-dark">Instagram</h1>
-                <br>
-                <h1 class="is-dark">YaBao Все праав защищены © 2021</h1>
+            <div class="column is-7 ">
+                <p class="has-text-weight-bold">Остались вопросы? А мы всегда на связи:</p><br><br>
+                <div class="button is-rounded is-normal buttonsize buttonradius ml-3"><a href="#"><img
+                        src="{% static 'uploads/viber.svg' %}" alt=""></a></div>
+                <div class="button is-rounded is-normal buttonsize buttonradius ml-3"><a href="#"><img
+                        src="{% static 'uploads/skype.svg' %}" alt=""></a></div>
+                <div class="button is-rounded is-normal buttonsize buttonradius ml-3"><a href="#"><img
+                        src="{% static 'uploads/message.svg' %}" alt=""></a></div>
+                <div class="button is-rounded is-normal buttonsize buttonradius ml-3"><a href="#"><img
+                        src="{% static 'uploads/telegram.svg' %}" alt=""></a></div>
+                <br><br>
+                <div class="button is-rounded is-normal buttonsize buttonradius ml-3"><a href="#"><img
+                        src="{% static 'uploads/facebook.svg' %}" alt=""></a></div>
+                <div class="button is-rounded is-normal buttonsize buttonradius ml-3"><a href="#"><img
+                        src="{% static 'uploads/vk.svg' %}" alt=""></a></div>
+                <div class="button is-rounded is-normal buttonradius1 ml-2">Написать нам</div>
+                <br><br><br>
+                <p class="is-size-4 has-text-warning ml-5 has-text-weight-bold">8 499 391-84-49</p>
+                <br><br>
+                <button class="button is-rounded is-light has-text-weight-bold">
+                    Заказать звонок
+                </button>
             </div>
-        </div>
-        <div class="column">
-            <p class="has-text-weight-bold">Остались вопросы? А мы всегда на связи:</p><br><br>
-            <div class="button is-rounded is-size-5 buttonsize buttonradius ml-3"><a href="#"><img
-                    src="{% static 'uploads/viber.svg' %}" alt=""></a></div>
-            <div class="button is-rounded is-size-5 buttonsize buttonradius ml-3"><a href="#"><img
-                    src="{% static 'uploads/skype.svg' %}" alt=""></a></div>
-            <div class="button is-rounded is-size-5 buttonsize buttonradius ml-3"><a href="#"><img
-                    src="{% static 'uploads/message.svg' %}" alt=""></a></div>
-            <div class="button is-rounded is-size-5 buttonsize buttonradius ml-3"><a href="#"><img
-                    src="{% static 'uploads/telegram.svg' %}" alt=""></a></div>
-            <br><br>
-            <div class="button is-rounded is-size-5 buttonsize buttonradius ml-3"><a href="#"><img
-                    src="{% static 'uploads/facebook.svg' %}" alt=""></a></div>
-            <div class="button is-rounded is-size-5 buttonsize buttonradius ml-3"><a href="#"><img
-                    src="{% static 'uploads/vk.svg' %}" alt=""></a></div>
-            <div class="button is-rounded is-size-5 buttonradius1 ml-5">Написать нам</div>
-            <br><br><br>
-            <p class="is-size-4 has-text-warning ml-5 has-text-weight-bold">8 499 391-84-49</p>
-            <br><br>
-            <button class="button is-rounded is-light has-text-weight-bold">
-                Заказать звонок
-            </button>
-        </div>
-    </footer>
+        </footer>
+    </div>
+
 </section>
 <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
