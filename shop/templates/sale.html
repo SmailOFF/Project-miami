@@ -1,0 +1,40 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="title has-text-weight-bold  ml-6 is-warning ">Акции</h1>
+
+    <div class="columns  is-centered">
+        <div class="column is-3 ">
+            <div class="box mx-5 is-3">
+                <img src="{% static 'uploads/first1.svg' %}" alt="" style="border-radius: 10px 10px 0 0">
+                <h1 class="title is-6 pt-3 has-text-weight-bold">Дарим кибер-призы</h1>
+                <p class="subtitle is-7">Вот так ачивка! Закажите Кибер-комбо и получите доступ к играм от MY.GAMES, а еще кокосовый батончик и шоколадное печенье «Cyber» от Bite. А также станьте автоматическим участником розыгрыша игровых ключей и больших пицц 29 июня.</p>
+                <button class="button is-warning has-text-weight-bold">
+                    <p class="">Посмотреть</p>
+                </button>
+            </div>
+        </div>
+        <div class="column is-3">
+            <div class="box mx-5 is-3">
+                <img src="image%202%20(1).svg" alt="" style="border-radius: 10px 10px 0 0">
+                <h1 class="title is-6">Herbal medicines that are safe for consumption</h1>
+                <p class="subtitle is-7">Herbal medicine is very widely used <br> at this time because of its very good
+                    <br>
+                    for your health...</p>
+                <a href="" class="text has-text-success">Read more →</a>
+            </div>
+        </div>
+        <div class="column  is-3">
+            <div class="box mx-5 is-3">
+                <img src="image%203.svg" alt="" style="border-radius: 10px 10px 0 0">
+                <h1 class="title is-6">Natural care for healthy facial skin</h1>
+                <p class="subtitle is-7">A healthy lifestyle should start from <br> now and also for your skin health.
+                    <br>
+                    There are some...</p>
+                <a href="" class="text has-text-success">Read more →</a>
+            </div>
+        </div>
+    </div>
+    <br>
+{% endblock %}

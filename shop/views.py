@@ -29,12 +29,12 @@ def products_list(request):
     products = products.filter(category=category) if category else products
     products = products.filter(brand=brand) if brand else products
     products = products.filter(Q(title__icontains=search) | Q(description__icontains=search)) if search else products
-    return render(request, 'products_list.html', {'products': products, 'slides': slides})
+    return render(request, 'homepage.html', {'products': products, 'slides': slides})
 
 
-def product_detail(request, pk):
-    product = Product.objects.get(pk=pk)
-    return render(request, 'product_detail.html', {'product': product})
+def sale(request):
+    product = Product.objects.all
+    return render(request, 'sale.html', {'product': product})
 
 
 def cart(request):
@@ -112,9 +112,11 @@ def rate_product(request, pk):
             rating.save()
             return redirect('shop:rate_product', pk=pk)
     form = RateForm()
-    return render(request, 'action.html', {'form': form, 'product': product, 'reviews': reviews})
+    return render(request, 'homepage.html', {'form': form, 'product': product, 'reviews': reviews})
 
 
 def orders(request):
     orders_list = Order.objects.filter(customer=request.user)
     return render(request, 'orders.html', {'orders': orders_list})
+
+

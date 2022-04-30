@@ -1,3 +1,12 @@
+.center{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.imagedown{
+    position: absolute;!important;
+    left: 70.5%;
+}
 .buttonsize{
     width: 15vh;
     height: 15vh;
