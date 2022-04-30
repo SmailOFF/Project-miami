@@ -1,3 +1,15 @@
+.buttonsize{
+    width: 15vh;
+    height: 15vh;
+}
+.buttonradius{
+    border-radius: 10px !important;
+}
+
+.buttonradius1{
+    border-radius: 10px !important;
+}
+
 
 .fone{
     top: -11vh;
