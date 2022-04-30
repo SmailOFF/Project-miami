@@ -1,0 +1,78 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="section">
+        {% block slider %}
+            <div class="container-slide mb-6">
+                <div id="carousel-demo" class="carousel">
+                    {% for slide in slides %}
+                        <div class="item-1">
+                            <img class="slider-img" src="{{ slide.image.url }}" alt="">
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="container">
+                <h1 class="is-size-3 has-text-weight-bold title">Новинки</h1>
+                <div class="columns">
+                    <div class="column"><img src="{% static 'uploads/small-pizza1.png' %}" alt="pizza"><span
+                            class="level-item span1 has-text-weight-bold">Карбонара <br>от 120 ₽ </span>
+                    </div>
+                    <div class="column"><img src="{% static 'uploads/small-pizza2.png' %}" alt="pizza"><span
+                            class="level-item span1 has-text-weight-bold">Карбонара <br> от 120 ₽ </span></div>
+                    <div class="column"><img src="{% static 'uploads/small-pizza3.png' %}" alt="pizza"><span
+                            class="level-item span1 has-text-weight-bold">Карбонара <br> от 120 ₽ </span></div>
+                    <div class="column"><img src="{% static 'uploads/small-pizza4.png' %}" alt="pizza"><span
+                            class="level-item span1 has-text-weight-bold">Карбонара <br> от 120 ₽ </span></div>
+                </div>
+            </div>
+            <br><br>
+            <div class="container">
+                <h1 class="has-text-weight-bold title">Паста</h1>
+                <div class="columns is-multiline">
+                    <div class="column is-3" style="background-color: white">
+                        <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                        <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                        <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
+                            масло,
+                            черный перец, пармезан.350 г
+                        </p>
+                        <div class="columns is-vcentered is-justify-content-space-between">
+                            <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                            <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="column is-3" style="background-color: white">
+                <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
+                    масло,
+                    черный перец, пармезан.350 г
+                </p>
+                <div class="columns is-vcentered is-justify-content-space-between">
+                    <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                    <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину</button>
+                </div>
+            </div>
+
+
+            <div class="column is-3" style="background-color: white">
+                <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки, трюфельное
+                    масло,
+                    черный перец, пармезан.350 г
+                </p>
+                <div class="columns is-vcentered is-justify-content-space-between">
+                    <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                    <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину</button>
+                </div>
+            </div>
+        {% endblock %}
+    </section>
+{% endblock %}
