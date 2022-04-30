@@ -34,7 +34,7 @@ def products_list(request):
 
 def product_detail(request, pk):
     product = Product.objects.get(pk=pk)
-    return render(request, 'product_detail.html', {'product': product})
+    return render(request, 'sale.html', {'product': product})
 
 
 def cart(request):
@@ -120,4 +120,6 @@ def orders(request):
     return render(request, 'orders.html', {'orders': orders_list})
 
 
-
+def sale(request):
+    product = Product.objects.all
+    return render(request, 'sale.html', {'product': product})
