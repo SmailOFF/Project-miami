@@ -1,3 +1,24 @@
+.section1{
+    position: fixed;!important;
+    z-index: 1000;
+}
+
+.buttonsignout{
+    border-radius: 10px!important;
+}
+
+.input1{
+    width: 20rem!important;
+}
+
+.image-down-right{
+
+}
+
+.imageleft{
+background-image: none;
+}
+
 body {
     font-family: 'Montserrat', sans-serif !important;
 }

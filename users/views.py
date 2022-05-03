@@ -1,3 +1,4 @@
+import form as form
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, update_session_auth_hash
 from . import forms
@@ -50,3 +51,10 @@ def reset_password(request):
         return redirect('users:sign_in')
     form = forms.ChangePasswordForm(request.user)
     return render(request, 'reset_password.html', {'form': form})
+
+
+def profile_detail(request):
+    form = forms.EditProfileForm(request.POST, instance=request.user)
+    if form.is_valid():
+        form.save()
+    return render(request, 'profile_detail.html', {'form': form})

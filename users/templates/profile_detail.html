@@ -1,0 +1,58 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+{% block content %}
+    <section class="section is-fullwidth">
+        <div class="container">
+            <div class="column pt-3 "><h1 class="title">Личные данные
+            </h1></div>
+            <div class="field column">
+                <label class="label">Имя</label>
+                <div class="control">
+                    <label>
+                        <input class="input input1" type="text" placeholder="Илья">
+                    </label>
+                </div>
+            </div>
+
+            <div class="field column">
+                <label class="label">Номер телефона</label>
+                <div class="control">
+                    <label>
+                        <input class="input input1 phonenumber" type="" placeholder="+998911234567">
+                    </label>
+                </div>
+            </div>
+
+            <div class="field column">
+                <label class="label">Data birthday</label>
+                <div class="control">
+                    <label>
+                        <input class="input input1" type="date" placeholder="">
+                    </label>
+                </div>
+            </div>
+
+            <div class="field column">
+                <label class="label">Номер телефона</label>
+                <div class="control">
+                    <label>
+                        <input class="input input1 phonenumber" type="" placeholder="+998911234567">
+                    </label>
+                </div>
+            </div>
+
+            <div class="field column">
+                <label class="label">Введите четыре цифры (PIN)</label>
+                <div class="control">
+                    <label>
+                        <input class="input input1" type="text" placeholder="1234">
+                    </label>
+                </div>
+                <br><br>
+                <button class="button is-medium is-light has-text-weight-bold buttonsignout">
+                Выйти
+            </button>
+    </section>
+            </div>
+
+{% endblock %}
