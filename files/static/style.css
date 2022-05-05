@@ -1,22 +1,39 @@
-.section1{
-    position: fixed;!important;
-    z-index: 1000;
+.section1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
 }
 
-.buttonsignout{
-    border-radius: 10px!important;
+.container1 {
+    max-width: 1000px !important;
 }
 
-.input1{
-    width: 20rem!important;
+
+.section1 {
+    position: fixed !important;
+    z-index: 999;
 }
 
-.image-down-right{
+.buttonsignout {
+    border-radius: 10px !important;
+}
+
+.input1 {
+    width: 20rem !important;
+}
+
+.image-down-right {
+    position: absolute !important;
+    top: 3000px;
+    right: 0;
+    z-index: -999;
 
 }
 
-.imageleft{
-background-image: none;
+.imageleft {
+    position: absolute;
+    z-index: -999;
+    left: 0;
 }
 
 body {
