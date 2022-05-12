@@ -1,14 +1,22 @@
-.box-content{
-    height: auto!important;
+.box-content {
+    height: auto !important;
     padding: 15px;
     background: #ffffff;
 }
 
-/*.card-icon{*/
-/*    position: relative;*/
-/*    left: 70px;*/
-/*    top: -40px;*/
-/*}*/
+.bulma-overlay-mixin {
+    @include overlay(3rem);
+    background-color: #00c7a9;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+
+.card-icon {
+    position: relative;
+    left: 90px;
+    top: 0;
+}
 
 .flex__box {
     display: flex;

@@ -1,4 +1,3 @@
-import form as form
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, update_session_auth_hash
 from . import forms
