@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-<section class="section  pt-0 postion-navbar section1 has-background-white ">
+<header>
+<section class="section pt-0 postion-navbar section1  is-light ">
     <div class="container position-navbar is-fluid">
         <div class="navbar">
             <div class="navbar-brand ">
@@ -31,7 +32,7 @@
             </div>
         </div>
         <div class="navbar-menu">
-            <div class="navbar-start is-size-5">
+            <div class="navbar-start is-size-4 is-vcentered ">
                 <a href="#" class="navbar-item"><span class="has-text-weight-bold">Pizza</span></a>
                 <a href="#" class="navbar-item"><span class="has-text-weight-bold">Pasta</span></a>
                 <a href="#" class="navbar-item"><span class="has-text-weight-bold">Soup</span></a>
@@ -44,14 +45,15 @@
                 <a href="#" class="navbar-item"><span class="has-text-weight-bold">Combo</span></a>
                 <a href="#" class="navbar-item"><span class="has-text-weight-bold">Contact</span></a>
                 <a href="#" class="navbar-item"><span class="has-text-weight-bold">Sign in</span></a>
-                <button class="button navbar-end is-rounded">
-                    <h1 class=""><strong>Cart</strong></h1>
+                <button class="button is-rounded mt-2">
+                    <div class="text has-text-weight-bold">Cart | {{ item.quantity }}</div>
                 </button>
             </div>
         </div>
     </div>
     </div>
 </section>
+</header>
 {% block content %}
 
 {% endblock %}
@@ -118,6 +120,13 @@
         slidesToScroll: 1,
         slidesToShow: 2,
         infinite: true,
+    });
+</script>
+
+<script class="text/javascript">
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector('header')
+        header.classList.toggle("sticky", window.scrollY > 0);
     });
 </script>
 </body>

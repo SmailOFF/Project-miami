@@ -116,7 +116,7 @@ def rate_product(request, pk):
 
 
 def orders(request):
-    orders_list = Order.objects.filter(customer=request.user)
+    orders_list = Order.objects.all
     return render(request, 'orders.html', {'orders': orders_list})
 
 

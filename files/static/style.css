@@ -1,15 +1,39 @@
+.imgleft{
+    position: absolute;
+    left: 0;
+    top: 800px;
+}
+
+
+.postionbox1 {
+    width: 15rem;
+    height: auto;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.boxrounded {
+    width: 15rem;
+    height: auto;
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+
 .box-content {
     height: auto !important;
     padding: 15px;
-    background: #ffffff;
+    background: #d1fff8;
 }
 
-.bulma-overlay-mixin {
-    @include overlay(3rem);
-    background-color: #00c7a9;
-    padding: 20px;
-    border-radius: 50px;
-}
+/*.bulma-overlay-mixin {*/
+/*    @include overlay(1rem);*/
+/*    background-color: white;*/
+/*    padding: 20px;*/
+/*    border-radius: 20px;*/
+
+/*}*/
 
 
 .card-icon {
@@ -30,9 +54,11 @@
 
 
 .section1 {
-    display: flex;
-    justify-content: space-between;
-    padding: 0px;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
 }
 
 .container1 {
@@ -75,9 +101,6 @@ body {
     color: yellow;
 }
 
-.span1 {
-    margin-top: -10vh;
-}
 
 .position-navbar {
     position: absolute;
