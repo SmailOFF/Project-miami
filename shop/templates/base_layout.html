@@ -15,8 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-<section class="section pt-0 postion-navbar section1  is-light ">
+<section class="section  pt-0 postion-navbar section1 has-background-white is-light ">
     <div class="container position-navbar is-fluid">
         <div class="navbar">
             <div class="navbar-brand ">
@@ -53,7 +52,6 @@
     </div>
     </div>
 </section>
-</header>
 {% block content %}
 
 {% endblock %}
@@ -120,13 +118,6 @@
         slidesToScroll: 1,
         slidesToShow: 2,
         infinite: true,
-    });
-</script>
-
-<script class="text/javascript">
-    window.addEventListener("scroll", function () {
-        const header = document.querySelector('header')
-        header.classList.toggle("sticky", window.scrollY > 0);
     });
 </script>
 </body>

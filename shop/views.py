@@ -123,3 +123,7 @@ def orders(request):
 def sale(request):
     product = Product.objects.all
     return render(request, 'sale.html', {'product': product})
+
+def contact(request):
+    contact = Product.objects.all
+    return render(request, 'contact.html', {'contact': contact})

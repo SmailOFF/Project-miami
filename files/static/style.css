@@ -1,3 +1,19 @@
+.mapsrounded2{
+    border-radius: 10px !important;
+}
+
+
+.mapsrounded{
+    border-radius: 10px !important;
+}
+
+.imgright1{
+    position: absolute !important;
+    right: 0;
+    z-index: -999;
+    top: 150px;
+}
+
 .imgleft{
     position: absolute;
     left: 0;
@@ -107,9 +123,10 @@ body {
 }
 
 .imagedown {
-    position: absolute;
-!important;
-    left: 70.5%;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute !important;
+    left: 74.5%;
 }
 
 .buttonsize {

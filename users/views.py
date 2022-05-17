@@ -53,7 +53,7 @@ def reset_password(request):
 
 
 def profile_detail(request):
-    form = forms.EditProfileForm(request.POST, instance=request.user)
+    form = forms.EditProfileForm(request.GET)
     if form.is_valid():
         form.save()
     return render(request, 'profile_detail.html', {'form': form})
