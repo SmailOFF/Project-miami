@@ -23,7 +23,7 @@ from online_store import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(('shop.urls', 'Project-miami'), namespace='shop')),
+    path('', include(('shop.urls', 'Project-miami'), namespace='online_store')),
     path('', include(('users.urls', 'Project-miami'), namespace='users')),
 ]
 

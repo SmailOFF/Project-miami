@@ -15,12 +15,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-<section class="section  pt-0 postion-navbar section1 has-background-white is-light ">
+<section class="section pt-0 postion-navbar section1 has-background-white is-light ">
     <div class="container position-navbar is-fluid">
         <div class="navbar">
             <div class="navbar-brand ">
                 <figure class="navbar-item">
-                    <img src="{% static 'uploads/logo.png' %}" alt="LOGO">
+                    <a href="{% url 'online_store:products' %}">
+                        <img src="{% static 'uploads/logo.png' %}" alt="LOGO">
+                    </a>
                 </figure>
             </div>
             <div class="navbar-end is-vcentered pt-3">

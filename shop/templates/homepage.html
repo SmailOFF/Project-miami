@@ -2,7 +2,9 @@
 {% load static %}
 
 {% block content %}
-    <section class="section ">
+
+
+    <section class="section is-medium">
         {% block slider %}
             <div class="container-slide mb-6">
                 <div id="carousel-demo" class="carousel">
@@ -13,11 +15,19 @@
                     {% endfor %}
                 </div>
             </div>
-            <div class="imageleft"><img src="{% static 'uploads/img-14.png' %}" alt=""></div>
-            <div class="container container1">
+
+            <div class="columns ">
+                <div class="column is-fullwidth">
+                    <div class="imageleft">
+                        <img src="{% static 'uploads/img-14.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="container container1 ">
                 <h1 class="is-size-3 has-text-weight-bold title">Новинки</h1>
-                <div class="columns is-vcentered is-multiline is-3">
-                        <div class="box mr-6">
+                <div class="columns is-justify-content-center">
+                    <div class="column is-4">
+                        <div class="box ">
                             <div class="media is-centered">
                                 <figure class="media-left">
                                     <p class="image is-64x64">
@@ -31,38 +41,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="box mr-6">
-                            <div class="media ">
-                                <figure class="media-left">
-                                    <p class="image is-64x64">
-                                        <img src="{% static 'uploads/small-pizza1.png' %}" alt="pizza"></p>
-                                </figure>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <div class="subtitle has-text-weight-bold">Карбонара <br> <span
-                                                class="has-text-warning ">от 120 ₽</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="box mr-6">
-                            <div class="media ">
-                                <figure class="media-left">
-                                    <p class="image is-64x64">
-                                        <img src="{% static 'uploads/small-pizza1.png' %}" alt="pizza"></p>
-                                </figure>
-                                <div class="media-content">
-                                    <div class="content">
-                                        <div class="subtitle has-text-weight-bold">Карбонара <br> <span
-                                                class="has-text-warning ">от 120 ₽</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="box mr-6">
+                    <div class="column is-4">
+                        <div class="box pl-3">
                             <div class="media ">
                                 <figure class="media-left">
                                     <p class="image is-64x64">
@@ -78,39 +60,40 @@
                         </div>
                     </div>
 
-                    {#                     <div class="box card">#}
-                    {#                        <div class="media">#}
-                    {#                            <figure class="media-left">#}
-                    {#                                <p class="image is-64x64">#}
-                    {#                                    <img src="{% static 'uploads/small-pizza1.png' %}" alt="pizza"></p>#}
-                    {#                            </figure>#}
-                    {#                            <div class="media-content">#}
-                    {#                                <div class="content">#}
-                    {#                                    <div class="subtitle">Карбонара <br> от 120 ₽</div>#}
-                    {#                                </div>#}
-                    {#                            </div>#}
-                    {#                        </div>#}
-                    {#                    </div>#}
-                    {##}
-                    {#                     <div class="box">#}
-                    {#                        <div class="media">#}
-                    {#                            <figure class="media-left">#}
-                    {#                                <p class="image is-64x64">#}
-                    {#                                    <img src="{% static 'uploads/small-pizza1.png' %}" alt="pizza"></p>#}
-                    {#                            </figure>#}
-                    {#                            <div class="media-content">#}
-                    {#                                <div class="content">#}
-                    {#                                    <div class="subtitle">Карбонара <br> от 120 ₽</div>#}
-                    {#                                </div>#}
-                    {#                            </div>#}
-                    {#                        </div>#}
-                    {#                    </div>#}
-                    {#                    <div class="column"><img src="{% static 'uploads/small-pizza2.png' %}" alt="pizza"><span#}
-                    {#                            class="level has-text-weight-bold">Карбонара <br> от 120 ₽ </span></div>#}
-                    {#                    <div class="column"><img src="{% static 'uploads/small-pizza3.png' %}" alt="pizza"><span#}
-                    {#                            class="level-item span1 has-text-weight-bold">Карбонара <br> от 120 ₽ </span></div>#}
-                    {#                    <div class="column"><img src="{% static 'uploads/small-pizza4.png' %}" alt="pizza"><span#}
-                    {#                            class="level-item span1 has-text-weight-bold">Карбонара <br> от 120 ₽ </span></div>#}
+
+                    <div class="column is-4">
+                        <div class="box pl-3">
+                            <div class="media ">
+                                <figure class="media-left">
+                                    <p class="image is-64x64">
+                                        <img src="{% static 'uploads/small-pizza1.png' %}" alt="pizza"></p>
+                                </figure>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <div class="subtitle has-text-weight-bold">Карбонара <br> <span
+                                                class="has-text-warning ">от 120 ₽</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column is-3">
+                        <div class="box pl-3">
+                            <div class="media ">
+                                <figure class="media-left">
+                                    <p class="image is-64x64">
+                                        <img src="{% static 'uploads/small-pizza1.png' %}" alt="pizza"></p>
+                                </figure>
+                                <div class="media-content">
+                                    <div class="content">
+                                        <div class="subtitle has-text-weight-bold">Карбонара <br> <span
+                                                class="has-text-warning ">от 120 ₽</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <br><br>
@@ -118,7 +101,7 @@
                 <div class="container container1">
                     <h1 class="has-text-weight-bold title">Паста</h1>
                     <div class="columns is-multiline p-0">
-                        <div class="column is-4" style="background-color: white">
+                        <div class="column is-3" style="background-color: white">
                             <img src="{% static 'uploads/pizza1.png' %}" alt="">
                             <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
                             <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
@@ -133,7 +116,7 @@
                             </div>
                         </div>
 
-                        <div class="column is-4" style="background-color: white">
+                        <div class="column is-3" style="background-color: white">
                             <img src="{% static 'uploads/pizza1.png' %}" alt="">
                             <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
                             <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
@@ -148,7 +131,22 @@
                             </div>
                         </div>
 
-                        <div class="column is-multiline is-4" style="background-color: white">
+                        <div class="column is-3" style="background-color: white">
+                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                            <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
+                                трюфельное
+                                масло,
+                                черный перец, пармезан.350 г
+                            </p>
+                            <div class="columns is-vcentered is-justify-content-space-between">
+                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="column is-multiline is-3" style="background-color: white">
                             <img src="{% static 'uploads/pizza1.png' %}" alt="">
                             <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
                             <p class="subtitle is-6 mt-0 ">Домашнаяя паста феттуччине, сливочный соус, креветки,
@@ -163,7 +161,7 @@
                             </div>
                         </div>
 
-                        <div class="column is-multiline is-4" style="background-color: white">
+                        <div class="column is-multiline is-3" style="background-color: white">
                             <img src="{% static 'uploads/pizza1.png' %}" alt="">
                             <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
                             <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
@@ -177,7 +175,7 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="column is-multiline is-4" style="background-color: white">
+                        <div class="column is-multiline is-3" style="background-color: white">
                             <img src="{% static 'uploads/pizza1.png' %}" alt="">
                             <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
                             <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
@@ -191,7 +189,149 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="column is-multiline is-4" style="background-color: white">
+                        <div class="column is-multiline is-3" style="background-color: white">
+                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                            <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
+                                трюфельное
+                                масло,
+                                черный перец, пармезан.350 г
+                            </p>
+                            <div class="columns is-vcentered is-justify-content-space-between">
+                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="column is-multiline is-3" style="background-color: white">
+                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                            <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
+                                трюфельное
+                                масло,
+                                черный перец, пармезан.350 г
+                            </p>
+                            <div class="columns is-vcentered is-justify-content-space-between">
+                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="section">
+                <div class="container container1">
+                    <h1 class="has-text-weight-bold title">Паста</h1>
+                    <div class="columns is-multiline p-0">
+                        <div class="column is-3" style="background-color: white">
+                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                            <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
+                                трюфельное
+                                масло,
+                                черный перец, пармезан.350 г
+                            </p>
+                            <div class="columns is-vcentered is-justify-content-space-between">
+                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="column is-3" style="background-color: white">
+                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                            <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
+                                трюфельное
+                                масло,
+                                черный перец, пармезан.350 г
+                            </p>
+                            <div class="columns is-vcentered is-justify-content-space-between">
+                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="column is-3" style="background-color: white">
+                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                            <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
+                                трюфельное
+                                масло,
+                                черный перец, пармезан.350 г
+                            </p>
+                            <div class="columns is-vcentered is-justify-content-space-between">
+                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="column is-multiline is-3" style="background-color: white">
+                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                            <p class="subtitle is-6 mt-0 ">Домашнаяя паста феттуччине, сливочный соус, креветки,
+                                трюфельное
+                                масло,
+                                черный перец, пармезан.350 г
+                            </p>
+                            <div class="columns is-vcentered is-justify-content-space-between">
+                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="column is-multiline is-3" style="background-color: white">
+                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                            <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
+                                трюфельное
+                                масло,
+                                черный перец, пармезан.350 г
+                            </p>
+                            <div class="columns is-vcentered is-justify-content-space-between">
+                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
+                                </button>
+                            </div>
+                        </div>
+                        <div class="column is-multiline is-3" style="background-color: white">
+                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                            <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
+                                трюфельное
+                                масло,
+                                черный перец, пармезан.350 г
+                            </p>
+                            <div class="columns is-vcentered is-justify-content-space-between">
+                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
+                                </button>
+                            </div>
+                        </div>
+                        <div class="column is-multiline is-3" style="background-color: white">
+                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                            <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
+                                трюфельное
+                                масло,
+                                черный перец, пармезан.350 г
+                            </p>
+                            <div class="columns is-vcentered is-justify-content-space-between">
+                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="column is-multiline is-3" style="background-color: white">
                             <img src="{% static 'uploads/pizza1.png' %}" alt="">
                             <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
                             <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
@@ -210,95 +350,65 @@
             </section>
 
             <section class="section">
-                <div class="container container1">
-                    <h1 class="has-text-weight-bold title">Паста</h1>
-                    <div class="columns is-multiline p-0">
-                        <div class="column is-4" style="background-color: white">
-                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
-                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
-                            <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
-                                трюфельное
-                                масло,
-                                черный перец, пармезан.350 г
-                            </p>
-                            <div class="columns is-vcentered is-justify-content-space-between">
-                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
-                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
-                                </button>
-                            </div>
+                <h1 class="has-text-weight-bold title">Паста</h1>
+                <div class="columns is-multiline p-0">
+                    <div class="column is-3" style="background-color: white">
+                        <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                        <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                        <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
+                            трюфельное
+                            масло,
+                            черный перец, пармезан.350 г
+                        </p>
+                        <div class="columns is-vcentered is-justify-content-space-between">
+                            <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                            <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
+                            </button>
                         </div>
+                    </div>
 
-                        <div class="column is-4" style="background-color: white">
-                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
-                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
-                            <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
-                                трюфельное
-                                масло,
-                                черный перец, пармезан.350 г
-                            </p>
-                            <div class="columns is-vcentered is-justify-content-space-between">
-                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
-                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
-                                </button>
-                            </div>
+                    <div class="column is-3" style="background-color: white">
+                        <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                        <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                        <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
+                            трюфельное
+                            масло,
+                            черный перец, пармезан.350 г
+                        </p>
+                        <div class="columns is-vcentered is-justify-content-space-between">
+                            <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                            <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
+                            </button>
                         </div>
+                    </div>
 
-                        <div class="column is-multiline is-4" style="background-color: white">
-                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
-                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
-                            <p class="subtitle is-6 mt-0 ">Домашнаяя паста феттуччине, сливочный соус, креветки,
-                                трюфельное
-                                масло,
-                                черный перец, пармезан.350 г
-                            </p>
-                            <div class="columns is-vcentered is-justify-content-space-between">
-                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
-                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
-                                </button>
-                            </div>
+                    <div class="column is-3" style="background-color: white">
+                        <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                        <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                        <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
+                            трюфельное
+                            масло,
+                            черный перец, пармезан.350 г
+                        </p>
+                        <div class="columns is-vcentered is-justify-content-space-between">
+                            <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                            <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
+                            </button>
                         </div>
+                    </div>
 
-                        <div class="column is-multiline is-4" style="background-color: white">
-                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
-                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
-                            <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
-                                трюфельное
-                                масло,
-                                черный перец, пармезан.350 г
-                            </p>
-                            <div class="columns is-vcentered is-justify-content-space-between">
-                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
-                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
-                                </button>
-                            </div>
-                        </div>
-                        <div class="column is-multiline is-4" style="background-color: white">
-                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
-                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
-                            <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
-                                трюфельное
-                                масло,
-                                черный перец, пармезан.350 г
-                            </p>
-                            <div class="columns is-vcentered is-justify-content-space-between">
-                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
-                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
-                                </button>
-                            </div>
-                        </div>
-                        <div class="column is-multiline is-4" style="background-color: white">
-                            <img src="{% static 'uploads/pizza1.png' %}" alt="">
-                            <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
-                            <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
-                                трюфельное
-                                масло,
-                                черный перец, пармезан.350 г
-                            </p>
-                            <div class="columns is-vcentered is-justify-content-space-between">
-                                <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
-                                <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
-                                </button>
-                            </div>
+                    <div class="column is-3" style="background-color: white">
+                        <img src="{% static 'uploads/pizza1.png' %}" alt="">
+                        <h2 class="title has-text-weight-bold">С креветками и трюфелями</h2>
+                        <p class="subtitle is-6 mt-0">Домашнаяя паста феттуччине, сливочный соус, креветки,
+                            трюфельное
+                            масло,
+                            черный перец, пармезан.350 г
+                        </p>
+                        <div class="columns is-vcentered is-justify-content-space-between">
+                            <h1 class="ml-4 is-size-3 has-text-weight-bold">от 600 ₽</h1>
+                            <button class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -307,7 +417,7 @@
             <br>
             <section class="section">
                 <div class="container container1">
-                    <div class="tile is-ancestor">
+                    <div class="tile is-ancestor m-6">
                         <div class="tile is-parent">
                             <img src="{% static 'uploads/image-26-big.jpg' %}" alt="">
                         </div>
@@ -331,15 +441,17 @@
                         </div>
                     </div>
                 </div>
+                <img class="image-down-right" src="{% static 'uploads/img1-large.png' %}" alt="">
             </section>
 
-            <section class="section has-background-grey-lighter">
+            <section class="section has-background-grey-lighter ml-0">
                 <div class="container container1">
                     <h1 class="title has-text-centered">Оплата и доставка</h1>
                     <div class="columns is-vcentered is-centered is-1">
                         <div class="column">
                             <div class="boxrounded">
-                                <img class="card-icon is-vcentered" src="{% static 'uploads/image-15.png' %}" alt="">
+                                <img class="card-icon is-vcentered" src="{% static 'uploads/image-15.png' %}"
+                                     alt="">
                                 <div class="subtitle is-6 mt-3 has-text-centered">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit
                                 </div>
@@ -348,7 +460,8 @@
 
                         <div class="column">
                             <div class="boxrounded">
-                                <img class="card-icon is-vcentered" src="{% static 'uploads/image-15-1.png' %}" alt="">
+                                <img class="card-icon is-vcentered" src="{% static 'uploads/image-15-1.png' %}"
+                                     alt="">
                                 <div class="subtitle is-6 mt-3 has-text-centered">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit
                                 </div>
@@ -374,14 +487,15 @@
                         </div>
                     </div>
                 </div>
-
-
-                <div class="column mapsrounded2 is-rounded">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.011311922709!2d37.65671028365306!3d55.75830570002984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a8dd1a8f359%3A0x562114fc3541cfb1!2z0JrRg9GA0YHQutCw0Y8!5e0!3m2!1sru!2s!4v1651566100376!5m2!1sru!2s"
-                            width="1300" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="columns">
+                    <div class="column">
+                        <div class="mapsrounded2 is-rounded ">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.011311922709!2d37.65671028365306!3d55.75830570002984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a8dd1a8f359%3A0x562114fc3541cfb1!2z0JrRg9GA0YHQutCw0Y8!5e0!3m2!1sru!2s!4v1651566100376!5m2!1sru!2s"
+                                    width="1290" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
                 </div>
-
             </section>
             </section>
         {% endblock %}
