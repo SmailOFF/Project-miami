@@ -15,50 +15,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-<section class="section pt-0 postion-navbar section1 has-background-white is-light ">
-    <div class="container position-navbar is-fluid">
+<header class="section1 has-background-white is-light ">
+    <div class="container_nav">
         <div class="navbar">
-            <div class="navbar-brand ">
-                <figure class="navbar-item">
-                    <a href="{% url 'online_store:products' %}">
-                        <img src="{% static 'uploads/logo.png' %}" alt="LOGO">
-                    </a>
-                </figure>
-            </div>
+            <figure class="navbar-item">
+                <a href="{% url 'online_store:products' %}">
+                    <img class="" src="https://fibopizza.ru/image/catalog/logo.png" alt="LOGO">
+                </a>
+            </figure>
             <div class="navbar-end is-vcentered pt-3">
                 <button class="button is-rounded is-light has-text-weight-bold">
                     Заказать звонок
                 </button>
-                <p class="is-size-4 has-text-warning ml-5  has-text-weight-bold">8 499 391-84-49</p>
+                <p class="is-size-4 ml-5  has-text-weight-bold textcolor">8 499 391-84-49</p>
             </div>
         </div>
         <div class="navbar-menu">
-            <div class="navbar-start is-size-4 is-vcentered ">
-                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Pizza</span></a>
-                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Pasta</span></a>
-                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Soup</span></a>
-                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Salate</span></a>
-                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Drink</span></a>
-                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Sladkoe</span></a>
-                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Bakaleya</span></a>
-                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Antipasta</span></a>
-                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Aksiya</span></a>
-                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Combo</span></a>
-                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Contact</span></a>
+            <div class="navbar-start is-size-6 is-vcentered ">
+                <a href="{% url 'online_store:products' %}" class="navbar-item"><span
+                        class="has-text-weight-bold">Pizza</span></a>
+                <a href="{% url 'online_store:pasta' %}" class="navbar-item"><span
+                        class="has-text-weight-bold">Pasta</span></a>
+                <a href="{% url 'online_store:supy' %}" class="navbar-item"><span
+                        class="has-text-weight-bold">Soup</span></a>
+                <a href="{% url 'online_store:salaty' %}" class="navbar-item"><span
+                        class="has-text-weight-bold">Salate</span></a>
+                <a href="{% url 'online_store:drink' %}" class="navbar-item"><span
+                        class="has-text-weight-bold">Drink</span></a>
+                <a href="{% url 'online_store:sladkoe' %}" class="navbar-item"><span class="has-text-weight-bold">Sladkoe</span></a>
+                <a href="{% url 'online_store:bakaleya' %}" class="navbar-item"><span class="has-text-weight-bold">Bakaleya</span></a>
+                <a href="{% url 'online_store:antipasta' %}" class="navbar-item"><span class="has-text-weight-bold">Antipasta</span></a>
+                <a href="{% url 'online_store:sale' %}" class="navbar-item"><span
+                        class="has-text-weight-bold">Aksiya</span></a>
+                <a href="{% url 'online_store:combo' %}" class="navbar-item"><span
+                        class="has-text-weight-bold">Combo</span></a>
+                <a href="{% url 'online_store:contact' %}" class="navbar-item"><span class="has-text-weight-bold">Contact</span></a>
                 <a href="#" class="navbar-item"><span class="has-text-weight-bold">Sign in</span></a>
-                <button class="button is-rounded mt-2">
+                <button class="button is-rounded mt-2 ml-5 color_button btn_color">
                     <div class="text has-text-weight-bold">Cart | {{ item.quantity }}</div>
                 </button>
             </div>
         </div>
     </div>
     </div>
-</section>
+</header>
 {% block content %}
 
 {% endblock %}
 <section class="section">
-    <div class="container">
+    <div class="container_nav">
         <footer class="columns">
             <div class="column is-6">
                 <figure>
@@ -66,9 +71,10 @@
                 </figure>
                 <div class="level-item is-justify-content-left navbar-start">
                     <div class="navbar-item has-text-weight-bold pl-0">Калорийность и состав</div>
-                    <div class="navbar-item has-text-weight-bold pl-0">Правовая информация</div>
+                    <div class="navbar-item has-text-weight-bold pl-0 ml-6">Правовая информация</div>
                 </div>
                 <p class="navbar-item has-text-weight-bold pl-0">Мы в соцсетях</p>
+                <br><br>
                 <div class="columns">
                     <div class="column">
                         <p class="is-dark pl-0">YouTube</p>
@@ -82,25 +88,35 @@
                         <p>Москва ул. Проспект <br>Вернадского 86В</p>
                     </div>
                 </div>
+                <br><br>
                 <h1 class="is-dark level">YaBao Все праав защищены © 2021</h1>
             </div>
-
+            <div class="pay">
+                <img src="{% static 'uploads/visa.svg' %}" title=" " alt=" ">
+                <img src="{% static 'uploads/visa.svg' %}" title=" " alt=" ">
+                <img src="/assets/img/master.png" title=" " alt=" ">
+            </div>
             <div class="column is-7 ">
                 <p class="has-text-weight-bold pl-4">Остались вопросы? А мы всегда на связи:</p><br><br>
-                <div class="button is-rounded is-normal buttonsize buttonradius ml-3"><a href="#"><img
-                        src="{% static 'uploads/viber.svg' %}" alt=""></a></div>
-                <div class="button is-rounded is-normal buttonsize buttonradius ml-3"><a href="#"><img
-                        src="{% static 'uploads/skype.svg' %}" alt=""></a></div>
-                <div class="button is-rounded is-normal buttonsize buttonradius ml-3"><a href="#"><img
-                        src="{% static 'uploads/message.svg' %}" alt=""></a></div>
-                <div class="button is-rounded is-normal buttonsize buttonradius ml-3"><a href="#"><img
-                        src="{% static 'uploads/telegram.svg' %}" alt=""></a></div>
+                <div class="button buttonsize  ml-3"><a href="#"><img class="imgsize"
+                                                                      src="{% static 'uploads/viber.svg' %}" alt=""></a>
+                </div>
+                <div class="button buttonsize ml-3"><a href="#"><img class="imgsize"
+                                                                     src="{% static 'uploads/skype.svg' %}" alt=""></a>
+                </div>
+                <div class="button buttonsize  ml-3"><a href="#"><img class="imgsize"
+                                                                      src="{% static 'uploads/message.svg' %}"
+                                                                      alt=""></a></div>
+                <div class="button buttonsize  ml-3"><a href="#"><img class="imgsize"
+                                                                      src="{% static 'uploads/telegram.svg' %}" alt=""></a>
+                </div>
                 <br><br>
-                <div class="button is-rounded is-normal buttonsize buttonradius ml-3"><a href="#"><img
-                        src="{% static 'uploads/facebook.svg' %}" alt=""></a></div>
-                <div class="button is-rounded is-normal buttonsize buttonradius ml-3"><a href="#"><img
-                        src="{% static 'uploads/vk.svg' %}" alt=""></a></div>
-                <div class="button is-rounded is-normal buttonradius1 ml-2">Написать нам</div>
+                <div class="button buttonsize  ml-3"><a href="#">
+                    <img class="imgsize" src="{% static 'uploads/facebook.svg' %}" alt=""></a></div>
+                <div class="button buttonsize  ml-3"><a href="#"><img class="imgsize"
+                                                                      src="{% static 'uploads/vk.svg' %}" alt=""></a>
+                </div>
+                <div class="button buttonradius1 ml-2 has-text-weight-bold">Написать нам</div>
                 <br><br><br>
                 <p class="is-size-4 has-text-warning has-text-weight-bold ml-4">8 499 391-84-49</p>
                 <br>

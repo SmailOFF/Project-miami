@@ -13,4 +13,12 @@ urlpatterns = [
     path('sale/', views.sale, name='sale'),
     path('contact/', views.contact, name='contact'),
     path('homepage/', views.products_list, name='products'),
+    path('supy/', views.supy, name='supy'),
+    path('pasta/', views.pasta, name='pasta'),
+    path('salaty/', views.salaty, name='salaty'),
+    path('drink/', views.drink, name='drink'),
+    path('sladkoe/', views.sladkoe, name='sladkoe'),
+    path('bakaleya/', views.bakaleya, name='bakaleya'),
+    path('antipasta/', views.antipasta, name='antipasta'),
+    path('combo/', views.combo, name='combo'),
 ]

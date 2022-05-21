@@ -26,7 +26,7 @@ def products_list(request):
         if not cart_item:
             cart_item = CartItem.objects.create(customer=request.user, product=product, quantity=1)
             cart_item.save()
-            return redirect('shop:products')
+            return redirect('shop:homepage')
         for item in cart_item:
             item.quantity += 1
             item.save()
@@ -131,3 +131,36 @@ def sale(request):
 def contact(request):
     contact = Product.objects.all
     return render(request, 'contact.html', {'contact': contact})
+
+def supy(request):
+    product_supy = Product.objects.all
+    return render(request, 'supy.html', {'product_supy': product_supy})
+
+def pasta(request):
+    product_pasta = Product.objects.all
+    return render(request, 'pasta.html', {'product_pasta': product_pasta})
+
+
+def salaty(request):
+    product_salaty = Product.objects.all
+    return render(request, 'salaty.html', {'product_salaty': product_salaty})
+
+def drink(request):
+    product_drink = Product.objects.all
+    return render(request, 'drink.html', {'product_drink': product_drink})
+
+def sladkoe(request):
+    product_sladkoe = Product.objects.all
+    return render(request, 'sladkoe.html', {'product_sladkoe': product_sladkoe})
+
+def bakaleya(request):
+    product_bakaleya = Product.objects.all
+    return render(request, 'bakaleya.html', {'product_bakaleya': product_bakaleya})
+
+def antipasta(request):
+    product_antipasta = Product.objects.all
+    return render(request, 'antipasta.html', {'product_antipasta': product_antipasta})
+
+def combo(request):
+    product_combo = Product.objects.all
+    return render(request, 'combo.html', {'product_combo': product_combo})
