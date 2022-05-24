@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .forms import RateForm
+# from .forms import RateForm
 from .models import *
 from django.contrib.auth.decorators import login_required
 from . import forms
@@ -14,7 +14,6 @@ from django.db.models import Q
 #     return render(request, 'homepage.html', {'content': content})
 
 def products_list(request):
-    search = request.GET.get('search')
     product_id = request.GET.get('product')
     category = request.GET.get('category')
     brand = request.GET.get('brand')
@@ -32,7 +31,6 @@ def products_list(request):
             item.save()
     products = products.filter(category=category) if category else products
     products = products.filter(brand=brand) if brand else products
-    products = products.filter(Q(title__icontains=search) | Q(description__icontains=search)) if search else products
     return render(request, 'homepage.html', {'products': products, 'slides': slides})
 
 
@@ -104,19 +102,19 @@ def create_order(request):
         'form': form})
 
 
-def rate_product(request, pk):
-    product = Product.objects.get(pk=pk)
-    reviews = Review.objects.filter(product=product)
-    if request.method == 'POST':
-        form = RateForm(request.POST)
-        if form.is_valid():
-            rating = form.save(commit=False)
-            rating.user = request.user
-            rating.product = product
-            rating.save()
-            return redirect('shop:rate_product', pk=pk)
-    form = RateForm()
-    return render(request, 'homepage.html', {'form': form, 'product': product, 'reviews': reviews})
+# def rate_product(request, pk):
+#     product = Product.objects.get(pk=pk)
+#     reviews = Review.objects.filter(product=product)
+#     if request.method == 'POST':
+#         form = RateForm(request.POST)
+#         if form.is_valid():
+#             rating = form.save(commit=False)
+#             rating.user = request.user
+#             rating.product = product
+#             rating.save()
+#             return redirect('shop:rate_product', pk=pk)
+#     form = RateForm()
+#     return render(request, 'homepage.html', {'form': form, 'product': product, 'reviews': reviews})
 
 
 def orders(request):
@@ -128,38 +126,53 @@ def sale(request):
     product = Product.objects.all
     return render(request, 'sale.html', {'product': product})
 
+
 def contact(request):
     contact = Product.objects.all
     return render(request, 'contact.html', {'contact': contact})
+
+
+def pizza(request, pk):
+    category_id = Category.objects.get(pk=pk)
+    products = Product.objects.get(category=category_id)
+    return render(request, 'pizza.html', {'products': products})
+
 
 def supy(request):
     product_supy = Product.objects.all
     return render(request, 'supy.html', {'product_supy': product_supy})
 
-def pasta(request):
-    product_pasta = Product.objects.all
-    return render(request, 'pasta.html', {'product_pasta': product_pasta})
+
+def pasta(request, pk):
+    category_id = Category.objects.get(pk=pk)
+    products = Product.objects.get(category=category_id)
+    return render(request, 'pasta.html', {'products': products})
 
 
 def salaty(request):
     product_salaty = Product.objects.all
     return render(request, 'salaty.html', {'product_salaty': product_salaty})
 
+
 def drink(request):
     product_drink = Product.objects.all
     return render(request, 'drink.html', {'product_drink': product_drink})
+
 
 def sladkoe(request):
     product_sladkoe = Product.objects.all
     return render(request, 'sladkoe.html', {'product_sladkoe': product_sladkoe})
 
+
 def bakaleya(request):
     product_bakaleya = Product.objects.all
     return render(request, 'bakaleya.html', {'product_bakaleya': product_bakaleya})
 
+
 def antipasta(request):
     product_antipasta = Product.objects.all
     return render(request, 'antipasta.html', {'product_antipasta': product_antipasta})
+
 
 def combo(request):
     product_combo = Product.objects.all

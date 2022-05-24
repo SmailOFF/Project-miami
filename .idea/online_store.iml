@@ -21,6 +21,8 @@
     <orderEntry type="library" name="bulma-carousel" level="application" />
     <orderEntry type="library" name="ionicons" level="application" />
     <orderEntry type="library" name="bulma" level="application" />
+    <orderEntry type="library" name="bulma-carousel" level="application" />
+    <orderEntry type="library" name="ionicons" level="application" />
   </component>
   <component name="PyDocumentationSettings">
     <option name="format" value="PLAIN" />

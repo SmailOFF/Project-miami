@@ -20,7 +20,7 @@
     <div class="container_nav">
         <div class="navbar">
             <figure class="navbar-item">
-                <a href="{% url 'online_store:products' %}">
+                <a href="{% url 'online_store:homepage' %}">
                     <img class="imglogosize" src="{% static 'uploads/logo.png' %}" alt="LOGO">
                 </a>
             </figure>
@@ -31,38 +31,28 @@
                 <p class="is-size-4 ml-5  has-text-weight-bold textcolor">8 499 391-84-49</p>
             </div>
         </div>
-        <div class="navbar-menu">
-            <div class="navbar-start is-size-6 is-vcentered pt-0">
-                <a href="{% url 'online_store:products' %}" class="navbar-item"><span
-                        class="has-text-weight-bold">Pizza</span></a>
-                <a href="{% url 'online_store:pasta' %}" class="navbar-item"><span
-                        class="has-text-weight-bold">Pasta</span></a>
-                <a href="{% url 'online_store:supy' %}" class="navbar-item"><span
-                        class="has-text-weight-bold">Soup</span></a>
-                <a href="{% url 'online_store:salaty' %}" class="navbar-item"><span
-                        class="has-text-weight-bold">Salate</span></a>
-                <a href="{% url 'online_store:drink' %}" class="navbar-item"><span
-                        class="has-text-weight-bold">Drink</span></a>
-                <a href="{% url 'online_store:sladkoe' %}" class="navbar-item"><span class="has-text-weight-bold">Sladkoe</span></a>
-                <a href="{% url 'online_store:bakaleya' %}" class="navbar-item"><span class="has-text-weight-bold">Bakaleya</span></a>
-                <a href="{% url 'online_store:antipasta' %}" class="navbar-item"><span class="has-text-weight-bold">Antipasta</span></a>
-                <a href="{% url 'online_store:sale' %}" class="navbar-item"><span
-                        class="has-text-weight-bold">Aksiya</span></a>
-                <a href="{% url 'online_store:combo' %}" class="navbar-item"><span
-                        class="has-text-weight-bold">Combo</span></a>
-                <a href="{% url 'online_store:contact' %}" class="navbar-item"><span class="has-text-weight-bold">Contact</span></a>
-                <a href="#" class="navbar-item"><span class="has-text-weight-bold">Sign in</span></a>
-                <button class="button is-rounded  ml-5 color_button btn_color">
-                    <div class="text has-text-weight-bold">Cart | {{ item.quantity }}</div>
-                </button>
+        <div class="navbar-menu is-vcentered">
+            <div class="navbar-start is-size-6 is-vcentered ">
+                {% categories %}
+                <a href="{% url 'online_store:sale' %}" class="level has-text-black mx-3"><span
+                        class="has-text-weight-bold">Акции</span></a>
+                <a href="{% url 'online_store:combo' %}" class="level has-text-black mx-3"><span
+                        class="has-text-weight-bold">Комбо</span></a>
+                <a href="{% url 'online_store:contact' %}" class="level has-text-black mx-3"><span
+                        class="has-text-weight-bold">Контакты</span></a>
+                <a href="#" class="level has-text-black mx-3 has-text-weight-semibold">Войти</a>
+                <a class="button is-rounded mx-3 color_button btn_color">
+                    <div class="text has-text-weight-bold">Kорзина | {{ item.quantity }}</div>
+                </a>
             </div>
         </div>
-    </div>
     </div>
 </header>
 {% block content %}
 
 {% endblock %}
+
+
 <section class="section">
     <div class="container_nav">
         <footer class="columns">

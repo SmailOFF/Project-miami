@@ -1,5 +1,5 @@
 from django import forms
-from .models import Order, Review, RATE_CHOICES
+from .models import Order
 from .bulma_mixin import BulmaMixin
 
 #dobavit v pizza
@@ -13,10 +13,10 @@ class OrderForm(BulmaMixin, forms.Form):
         fields = ['name','phone', 'address','time_delivery']
 
 
-class RateForm(forms.ModelForm):
-    text = forms.CharField(widget=forms.Textarea(attrs={'class': 'textarea'}), label='Leave your review here')
-    rate = forms.ChoiceField(choices=RATE_CHOICES, required=True, label='Rate product from 1 to 5')
-
-    class Meta:
-        model = Review
-        fields = ('text', 'rate')
+# class RateForm(forms.ModelForm):
+#     text = forms.CharField(widget=forms.Textarea(attrs={'class': 'textarea'}), label='Leave your review here')
+#     rate = forms.ChoiceField(choices=RATE_CHOICES, required=True, label='Rate product from 1 to 5')
+#
+#     class Meta:
+#         model = Review
+#         fields = ('text', 'rate')

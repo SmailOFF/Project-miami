@@ -1,13 +1,15 @@
-<aside class="navbar ">
-    <p class="label navbar-start">
-    </p>
-    <ul class="">
-        {% for category in categories %}
-            <li>
-                <a href="{% url 'online_store:products' %}?category={{ category.pk }}" class="is-horizontal is-size-4">
-                    {{ category }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
-</aside>
+<div class="level is-vcentered">
+    {% for category in categories %}
+        <div class="level-item mx-3 ">
+            <a href="{% url 'online_store:homepage' %}?category={{ category.pk }}" class="is-horizontal has-text-black has-text-weight-semibold is-size-6">
+                {{ category }}
+            </a>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+
+
+
