@@ -1,11 +1,10 @@
-<aside class="menu has-background-primary-light p-4" style="height: 750px; border-radius: 10px">
-    <p class="menu-label is-size-3">
-        Categories
+<aside class="navbar ">
+    <p class="label navbar-start">
     </p>
-    <ul class="menu-list">
+    <ul class="">
         {% for category in categories %}
             <li>
-                <a href="{% url 'shop:products' %}?category={{ category.pk }}" class="dropdown-item is-size-5">
+                <a href="{% url 'online_store:products' %}?category={{ category.pk }}" class="is-horizontal is-size-4">
                     {{ category }}
                 </a>
             </li>

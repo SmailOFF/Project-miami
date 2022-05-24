@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 class Product(models.Model):
     title = models.CharField(max_length=255)
+    slug = models.SlugField()
     description = models.TextField()
     price = models.IntegerField()
     is_new = models.BooleanField(default=False)
@@ -16,7 +17,7 @@ class Product(models.Model):
         return self.title
 
     class Meta:
-        db_table = 'shop_products'
+        db_table = 'online_store_products'
 
 
 class Category(models.Model):
@@ -55,7 +56,8 @@ class CartItem(models.Model):
     def total_price(self):
         return self.product.price * self.quantity
 
-#dobavit v pizza
+
+# dobavit v pizza
 class Order(models.Model):
     name = models.CharField(max_length=255)
     phone = models.CharField(max_length=255)

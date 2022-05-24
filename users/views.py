@@ -53,7 +53,9 @@ def reset_password(request):
 
 
 def profile_detail(request):
-    form = forms.EditProfileForm(request.GET)
+    form = forms.EditProfileForm()
     if form.is_valid():
         form.save()
+        return redirect('shop:products')
+    form = forms.EditProfileForm()
     return render(request, 'profile_detail.html', {'form': form})

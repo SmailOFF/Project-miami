@@ -1,3 +1,12 @@
+.imglogosize{
+    max-height: 3.75rem !important;
+}
+
+.input {
+    max-width: 30% !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .btn_color{
     border-radius: 8px !important;
     width: 100px !important;
@@ -118,7 +127,7 @@
     overflow: hidden;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     z-index: 999;
-    height: 110px !important;
+    height: 130px !important;
     border-radius: 4px !important;
     background-color: #333;
     position: fixed !important; /* Set the navbar to fixed position */

@@ -25,14 +25,15 @@ class SignInFrom(BulmaMixin, AuthenticationForm):
 
 
 class EditProfileForm(BulmaMixin, forms.ModelForm):
-    email = forms.EmailField(label='Write your email')
-    first_name = forms.CharField(label='Write your first name')
-    last_name = forms.CharField(label='Write your last name')
-    username = forms.CharField(label='Write your username')
+    email = forms.EmailField(label='Имя')
+    phone = forms.CharField(label='Номер телефона')
+    data_birthday = forms.DateField(label='Data birthday')
+    phone2 = forms.CharField(label='Номер телефона')
+    pin = forms.CharField(label='Введите четыре цифры (Pin)')
 
     class Meta:
         model = User
-        fields = ['email', 'first_name', 'last_name', 'username']
+        fields = ['email', 'phone', 'data_birthday', 'phone2', 'pin']
 
 
 class ChangePasswordForm(BulmaMixin, PasswordChangeForm):

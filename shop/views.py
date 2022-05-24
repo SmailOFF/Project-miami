@@ -9,9 +9,9 @@ from django.db.models import Q
 
 # Create your views here.
 # @login_required(login_url='/users/sign_in')
-def homepage(request):
-    content = Product.objects.all
-    return render(request, 'homepage.html', {'content': content})
+# def homepage(request):
+#     content = Product.objects.all
+#     return render(request, 'homepage.html', {'content': content})
 
 def products_list(request):
     search = request.GET.get('search')

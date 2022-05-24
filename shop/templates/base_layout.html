@@ -1,4 +1,5 @@
 {% load static %}
+{% load categories %}
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
@@ -15,12 +16,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="section1 has-background-white is-light ">
+<header class="section1 has-background-white is-light  ">
     <div class="container_nav">
         <div class="navbar">
             <figure class="navbar-item">
                 <a href="{% url 'online_store:products' %}">
-                    <img class="" src="https://fibopizza.ru/image/catalog/logo.png" alt="LOGO">
+                    <img class="imglogosize" src="{% static 'uploads/logo.png' %}" alt="LOGO">
                 </a>
             </figure>
             <div class="navbar-end is-vcentered pt-3">
@@ -31,7 +32,7 @@
             </div>
         </div>
         <div class="navbar-menu">
-            <div class="navbar-start is-size-6 is-vcentered ">
+            <div class="navbar-start is-size-6 is-vcentered pt-0">
                 <a href="{% url 'online_store:products' %}" class="navbar-item"><span
                         class="has-text-weight-bold">Pizza</span></a>
                 <a href="{% url 'online_store:pasta' %}" class="navbar-item"><span
@@ -51,7 +52,7 @@
                         class="has-text-weight-bold">Combo</span></a>
                 <a href="{% url 'online_store:contact' %}" class="navbar-item"><span class="has-text-weight-bold">Contact</span></a>
                 <a href="#" class="navbar-item"><span class="has-text-weight-bold">Sign in</span></a>
-                <button class="button is-rounded mt-2 ml-5 color_button btn_color">
+                <button class="button is-rounded  ml-5 color_button btn_color">
                     <div class="text has-text-weight-bold">Cart | {{ item.quantity }}</div>
                 </button>
             </div>
@@ -90,11 +91,6 @@
                 </div>
                 <br><br>
                 <h1 class="is-dark level">YaBao Все праав защищены © 2021</h1>
-            </div>
-            <div class="pay">
-                <img src="{% static 'uploads/visa.svg' %}" title=" " alt=" ">
-                <img src="{% static 'uploads/visa.svg' %}" title=" " alt=" ">
-                <img src="/assets/img/master.png" title=" " alt=" ">
             </div>
             <div class="column is-7 ">
                 <p class="has-text-weight-bold pl-4">Остались вопросы? А мы всегда на связи:</p><br><br>
