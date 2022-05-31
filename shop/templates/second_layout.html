@@ -1,0 +1,108 @@
+{% load static %}
+{% load categories %}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'bulma.css' %}">
+    <link rel="stylesheet" href="{% static 'bulma.min.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="section2 has-background-white  ">
+    <div class="container_nav">
+        <div class="navbar">
+            <figure class="navbar-item">
+                <a href="{% url 'online_store:homepage' %}">
+                    <img class="imglogosize2" src="{% static 'uploads/logo.png' %}" alt="LOGO">
+                </a>
+            </figure>
+
+            <figure class="navbar-item is-align-content-space-between is-fixed-top">
+                <a href="{% url 'online_store:homepage' %}">
+                    <img class="imglogosize3" src="{% static 'uploads/cartimg.png' %}" alt="LOGO">
+                </a>
+            </figure>
+        </div>
+    </div>
+</header>
+
+{% block content %}
+
+{% endblock %}
+
+<section class="section">
+    <div class="container_nav">
+        <footer class="columns">
+            <div class="column is-6">
+                <figure>
+                    <img src="{% static 'uploads/logo.png' %}" alt="">
+                </figure>
+                <div class="level-item is-justify-content-left navbar-start">
+                    <div class="navbar-item has-text-weight-bold pl-0">Калорийность и состав</div>
+                    <div class="navbar-item has-text-weight-bold pl-0 ml-6">Правовая информация</div>
+                </div>
+                <p class="navbar-item has-text-weight-bold pl-0">Мы в соцсетях</p>
+                <br><br>
+                <div class="columns">
+                    <div class="column">
+                        <p class="is-dark pl-0">YouTube</p>
+                        <p class="is-dark pl-0">Instagram</p>
+                    </div>
+                    <div class="column is-centern">
+                        <p class="is-dark pl-0 ">Facebook</p>
+                        <p class="is-dark pl-0 ">ВКонтакте</p>
+                    </div>
+                    <div class="column">
+                        <p>Москва ул. Проспект <br>Вернадского 86В</p>
+                    </div>
+                </div>
+                <br><br>
+                <h1 class="is-dark level">YaBao Все праав защищены © 2021</h1>
+            </div>
+            <div class="column is-7 ">
+                <p class="has-text-weight-bold pl-4">Остались вопросы? А мы всегда на связи:</p><br><br>
+                <div class="button buttonsize  ml-3"><a href="#"><img class="imgsize"
+                                                                      src="{% static 'uploads/viber.svg' %}" alt=""></a>
+                </div>
+                <div class="button buttonsize ml-3"><a href="#"><img class="imgsize"
+                                                                     src="{% static 'uploads/skype.svg' %}" alt=""></a>
+                </div>
+                <div class="button buttonsize  ml-3"><a href="#"><img class="imgsize"
+                                                                      src="{% static 'uploads/message.svg' %}"
+                                                                      alt=""></a></div>
+                <div class="button buttonsize  ml-3"><a href="#"><img class="imgsize"
+                                                                      src="{% static 'uploads/telegram.svg' %}" alt=""></a>
+                </div>
+                <br><br>
+                <div class="button buttonsize  ml-3"><a href="#">
+                    <img class="imgsize" src="{% static 'uploads/facebook.svg' %}" alt=""></a></div>
+                <div class="button buttonsize  ml-3"><a href="#"><img class="imgsize"
+                                                                      src="{% static 'uploads/vk.svg' %}" alt=""></a>
+                </div>
+                <div class="button buttonradius1 ml-2 has-text-weight-bold">Написать нам</div>
+                <br><br><br>
+                <p class="is-size-4 has-text-warning has-text-weight-bold ml-4">8 499 391-84-49</p>
+                <br>
+                <button class="button is-rounded is-light has-text-weight-bold ml-4 ">
+                    Заказать звонок
+                </button>
+            </div>
+        </footer>
+    </div>
+    <img class="imagedown" src="{% static 'uploads/niz-foto.png' %}" alt="">
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+</body>
+</html>

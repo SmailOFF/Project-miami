@@ -1,7 +1,31 @@
 {% extends 'second_layout.html' %}
-
-{% load static from static %}
+{% load static %}
 
 
 {% block content %}
+    <div class="section is-medium">
+        <div class="container_nav2">
+            <h1 class="title textcolor">Корзина</h1>
+            {#Rectangle#}
+            <div class="rectangle is-flex"></div>
+            <br><br>
+            <div class="columns is-justify-content-center">
+                <a href="{% url 'online_store:homepage' %}" class="column">
+                    <div class="media is-centered">
+                        <figure class="media-left">
+                            <p class="image is-64x64">
+                                <img src="{{ product.thumb.url }}" alt="pizza"></p>
+                        </figure>
+                        <div class="media-content">
+                            <div class="content">
+                                <div class="title has-text-weight-bold">{{ product.title }} <br>
+                                    <span class="subtitle ">{{ product.descpription }}</span></div>
+                                <span class="textcolor ">{{ product.price }} ₽</span></div>
+                            </div>
+                        </div>
+                </a>
+                    </div>
+
+            </div>
+        </div>
 {% endblock %}
