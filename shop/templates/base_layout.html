@@ -40,7 +40,7 @@
                         class="has-text-weight-bold">Комбо</span></a>
                 <a href="{% url 'online_store:contact' %}" class="level has-text-black mx-3"><span
                         class="has-text-weight-bold">Контакты</span></a>
-                <a href="#" class="level has-text-black mx-3 has-text-weight-semibold">Войти</a>
+                <a href="{% url 'users:profile_detail' %}" class="level has-text-black mx-3 has-text-weight-semibold">Войти</a>
                 <a class="button is-rounded mx-3 color_button btn_color">
                     <div class="text has-text-weight-bold">Kорзина | {{ item.quantity }}</div>
                 </a>

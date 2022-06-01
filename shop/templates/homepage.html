@@ -106,7 +106,7 @@
                         <p class="subtitle is-6 mt-0">{{ product.description }}</p>
                         <div class="columns is-vcentered is-justify-content-space-between">
                             <h1 class="ml-4 is-size-4 has-text-weight-bold">от {{ product.price }} ₽</h1>
-                            <a href="{% url 'online_store:homepage' product.pk %}?product={{ product.id }}"
+                            <a href="{% url 'online_store:homepage'%}"
                                class="button is-rounded is-warning has-text-weight-bold mr-3">В корзину
                             </a>
                         </div>
